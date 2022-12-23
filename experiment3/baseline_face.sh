@@ -44,7 +44,7 @@ FINETUNE_EPOCHS=100
 # CNN20 pretrained on the face verification task
 echo {\"face_verification\": \"0.9942\"} > logs/baseline_face_acc.txt
 
-for TASK_ID in `seq 2 8`; do
+for TASK_ID in `seq 3 3`; do
       CUDA_VISIBLE_DEVICES=$GPU_ID python packnet_face_main.py \
           --arch $ARCH \
           --dataset ${DATASETS[TASK_ID]} \
