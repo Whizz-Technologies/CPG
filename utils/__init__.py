@@ -35,6 +35,7 @@ class Metric(object):
         return
 
     def update(self, val, num):
+        self.sum = self.sum.to("cuda:0")
         self.sum += val * num
         self.n += num
 
